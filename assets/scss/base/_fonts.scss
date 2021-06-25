@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Regular.eot');
+    src: local('Calibre'), local('Calibre-Regular'),
+        url('../fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-Regular.woff2') format('woff2'),
+        url('../fonts/Calibre-Regular.woff') format('woff'),
+        url('../fonts/Calibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-RegularItalic.eot');
+    src: local('Calibre'), local('Calibre-RegularItalic'),
+        url('../fonts/Calibre-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-RegularItalic.woff2') format('woff2'),
+        url('../fonts/Calibre-RegularItalic.woff') format('woff'),
+        url('../fonts/Calibre-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Medium.eot');
+    src: local('Calibre Medium'), local('Calibre-Medium'),
+        url('../fonts/Calibre-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-Medium.woff2') format('woff2'),
+        url('../fonts/Calibre-Medium.woff') format('woff'),
+        url('../fonts/Calibre-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-MediumItalic.eot');
+    src: local('Calibre Medium Italic'), local('Calibre-MediumItalic'),
+        url('../fonts/Calibre-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Calibre-MediumItalic.woff') format('woff'),
+        url('../fonts/Calibre-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Bold.eot');
+    src: local('Calibre Bold'), local('Calibre-Bold'),
+        url('../fonts/Calibre-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-Bold.woff2') format('woff2'),
+        url('../fonts/Calibre-Bold.woff') format('woff'),
+        url('../fonts/Calibre-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-BoldItalic.eot');
+    src: local('Calibre Bold Italic'), local('Calibre-BoldItalic'),
+        url('../fonts/Calibre-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibre-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Calibre-BoldItalic.woff') format('woff'),
+        url('../fonts/Calibre-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}

@@ -1,0 +1,196 @@
+.owl-carousel{
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+    .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        touch-action: manipulation;
+        -moz-backface-visibility: hidden;
+        &:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+    .owl-stage-outer {
+        position: relative;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    .owl-wrapper, .owl-item {
+        backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
+     }
+    .owl-item {
+        float: left;
+        position: relative;
+        min-height: 1px;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    .owl-dots.disabled {
+        display: none;
+    }
+    .owl-nav .owl-prev, .owl-nav .owl-next, .owl-dot {
+        cursor: pointer;
+        user-select: none; 
+    }
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next,
+    button.owl-dot {
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+    }
+    &.owl-loaded {
+        display: block;
+    }
+    &.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+    &.owl-hidden {
+        opacity: 0;
+    }
+    &.owl-refresh .owl-item {
+        visibility: hidden;
+    }
+    &.owl-drag .owl-item {
+        touch-action: pan-y;
+        user-select: none;
+    }
+    &.owl-grab {
+        cursor: move;
+        cursor: grab;
+    }
+    
+    /* No Js */
+    .no-js .owl-carousel {
+      display: block;
+    }
+}
+
+.owl-carousel{
+	.animated {
+		animation-duration: 1000ms;
+		animation-fill-mode: both;
+	}
+	.owl-animated-in {
+		z-index: 0;
+	}
+	.owl-animated-out {
+		z-index: 1;
+	}
+	.fadeOut {
+		animation-name: fadeOut;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.owl-nav{
+    .owl-prev,
+    .owl-next{
+        position: absolute;
+        top: 50%;
+        margin-top: -2rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: $white;
+        border-radius: 50%;
+        transition: all .3s ease;
+        &:hover{
+            background-color: $purple;
+            span{
+                border-color: $white;
+            }
+        }
+        &.disabled{
+            display: none!important;
+        }
+    }
+    .owl-prev{
+        left: 1rem;
+        padding-left: 5px!important;
+        span{
+            display: block;
+            width: 0px;
+            margin: 0 auto;
+            width: 15px;
+            height: 15px;
+            border-top: 2px solid $purple;
+            border-right: 2px solid $purple;
+            transform: rotateZ(-135deg);
+        }
+    }
+    .owl-next{
+        right: 1rem;
+        padding-right: 5px!important;
+        span{
+            display: block;
+            width: 0px;
+            margin: 0 auto;
+            width: 15px;
+            height: 15px;
+            border-top: 2px solid $purple;
+            border-right: 2px solid $purple;
+            transform: rotateZ(45deg);
+        }
+    }
+    @include media-breakpoint-up('lg'){
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        .owl-prev,
+        .owl-next{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+@include media-breakpoint-up('lg'){
+    .owl-carousel{
+        &:hover{
+            .owl-nav{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.spotlight-box{
+    overflow: hidden;
+    margin-left: 15px;
+    .card{
+        width: 305px;
+    }
+    @include media-breakpoint-up('sm'){
+        margin-left: 25px;
+    }
+    @include media-breakpoint-up('md'){
+        margin-left: 3rem;
+        .card{
+            width: 444px;
+        }
+    }
+    @include media-breakpoint-up('lg'){
+        margin-left: 5rem;
+    }
+}

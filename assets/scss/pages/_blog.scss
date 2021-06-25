@@ -1,0 +1,307 @@
+.blog, .single{
+  .section{
+    padding: 2rem 0 0;
+  }
+  .spotlight-box{
+    margin: 0;
+    overflow: visible;
+  }
+  @include media-breakpoint-up('md'){
+    .section{
+      padding: 4rem 0 0;
+      .section-header{
+        margin: 0 0 2rem;
+      }
+    }
+  }
+  @include media-breakpoint-up('lg'){
+    .container{
+      max-width: 1300px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .section{
+      padding: 4.5rem 0 0;
+    }
+  }
+  
+  .hentry{
+    margin: 1.5rem 0 2.5rem;
+    .cvwp-video-player .cvwp-load-video{
+      background-image: url(../img/play-icon.svg);
+      background-size: 100px;
+      transition: all .3s ease;
+      &:hover{
+        opacity: .7;
+      }
+    }
+    .entry-thumbnail{
+      position: relative;
+      width: 100%;
+      margin-bottom: 2rem;
+      &:before{
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+      }
+      img, .cvwp-video-player{
+        border: 2px solid $black;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+      }
+    }
+    &.double{
+      .entry-thumbnail{
+        &:before{
+          padding-top: 50%;
+        }
+        img{
+          width: 48%;
+          padding: 0;
+          & + img{
+            left: 52%;
+          }
+        }
+      }
+    }
+    .entry-content{
+      padding: 0 1rem;
+      .left-side{
+        margin: 0 0 2rem;
+      }
+    }
+    .entry-title{
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -2px;
+      text-transform: unset;
+      a{
+        color: $black;
+        text-decoration: none;
+        &:hover{
+          color: $purple;
+        }
+      }
+    }
+    .entry-author{
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 0 0 .25rem;
+    }
+    .entry-date{
+      color: #3D3D4B;
+    }
+    
+    .share{
+      display: flex;
+      align-items: flex-end;
+      color: #3D3D4B;
+      font-size: 1rem;
+      > div{
+        margin-left: .5rem;
+      }
+    }
+    @include media-breakpoint-up('sm'){
+      .entry-title{
+        font-size: 3rem;
+      }
+      .entry-content{
+        display: flex;
+        padding: 0;
+        .left-side, .right-side{
+          flex: 0 0 50%;
+          padding: 0 1rem;
+          margin: 0;
+        }
+      }
+    }
+    @include media-breakpoint-up('md'){
+      margin: 2rem 0 5rem;
+      .entry-thumbnail{
+        margin: 0 0 4rem;
+      }
+      .entry-title{
+        margin: 0 0 2rem;
+      }
+      .entry-content{
+        display: flex;
+        padding: 0;
+        .left-side, .right-side{
+          flex: 0 0 50%;
+          padding: 0 2rem;
+          margin: 0;
+        }
+        .right-side{
+          font-size: 1.25rem;
+        }
+      }
+    }
+    @include media-breakpoint-up('lg'){
+      .entry-thumbnail{
+        margin: 0 0 6rem;
+      }
+      .entry-title{
+        font-size: 5rem;
+      }
+      .entry-content{
+        display: flex;
+        padding: 0;
+        .left-side{
+          padding: 0 1rem 0 7rem;
+        }
+        .right-side{
+          padding: 0 9rem 0 5rem;
+        }
+      }
+    }
+  }
+}
+
+.pagination, .comments-pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav-links{
+    display: flex;
+    .page-numbers{
+      width: 2.5rem;
+      height: 2.5rem;
+      color: #000;
+      font-size: 22px;
+      line-height: 3rem;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 .25rem;
+      border-radius: 50%;
+      &.current{
+        background-color: $purple;
+      }
+    }
+    a.page-numbers{
+      &:hover{
+        background-color: #3d3d4b;
+        color: #fff;
+      }
+    }
+  }
+}
+.comments-pagination{
+  .nav-links{
+    display: flex;
+    .page-numbers{
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 14px;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.comments-area{
+  padding: 2rem 0 0;
+  .comment-reply-title{
+    display: none;
+  }
+  .comment-respond{
+    margin: 0 0 1rem;
+  }
+  .comment-form-comment{
+    display: flex;
+    align-items: flex-start;
+    textarea{
+      flex: 1 0 1%;
+      width: 100%;
+      border: none;
+      border-radius: 2px;
+      background-color: $white;
+      height: 30px;
+      resize: none;
+      padding: .5rem .875rem .25rem;
+      margin-top: 21px;
+      font-size: 14px;
+      transition: all .3s ease;
+      &:focus{
+        height: 6rem;
+      }
+    }
+  }
+  .form-submit{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: .75rem;
+    .submit{
+      border: none;
+      border-radius: 1rem;
+      background-color: #3D3D4B;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      text-transform: uppercase;
+      height: 1.5rem;
+      padding: 0 1.25rem;
+      &:hover{
+        background-color: $lgreen;
+      }
+    }
+    .cancel-btn{
+      color: $black;
+      line-height: 1.75rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      height: 1.5rem;
+      padding: 0 1.25rem;
+      &:hover{
+        color: $purple;
+      }
+    }
+  }
+  .comment-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    .comment{
+      padding: .75rem 0;
+      .comment-body{
+        display: flex;
+        .comment-entry{
+          padding-top: .5rem;
+        }
+        .comment-meta{
+          display: flex;
+          color: #8C8C8C;
+          margin: 0 -.25rem .25rem;
+          .meta{
+            padding: 0 .25rem;
+          }
+        }
+        p{
+          margin: 0;
+        }
+      }
+    }
+  }
+  .comment-form-user, .comment-avatar{
+    position: relative;
+    flex: 0 0 72px;
+    width: 72px;
+    height: 72px;
+    margin-right: 10px;
+    border: 2px solid $black;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+}

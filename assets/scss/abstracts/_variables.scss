@@ -1,0 +1,116 @@
+$lgreen:#2AE648 !default;
+$green: #00BD5E !default;
+$purple:#E427FF !default;
+$white: #ffffff !default;
+$light: #e5e5e5 !default;
+$gray:  #8C8C8C !default;
+$dark:  #3D3D4B !default;
+$black: #000000 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "green":    $green,
+        "purple":   $purple,
+        "white":    $white,
+        "light":    $light,
+        "gray":     $gray,
+        "dark":     $dark,
+        "black":    $black,
+    ),
+    $theme-colors
+);
+
+$text-light:    $white !default;
+$text-dark:     $black !default;
+$link-color:    $purple !default;
+
+$spacer: 1rem !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 768px,
+    md: 992px,
+    lg: 1400px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+$container-max-widths: (
+    sm: 720px,
+    md: 970px,
+    lg: 1800px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$grid-columns:      12 !default;
+$grid-gutter-width: 30px !default;
+
+
+$body-bg:                   $light !default;
+$body-color:                $black !default;
+
+$font-weight-normal:        300 !default;
+$font-weight-bold:          700 !default;
+
+$font-family-base:          'Calibre', sans-serif !default;
+$font-size-base:            1rem !default;
+$font-weight-base:          $font-weight-normal !default;
+$line-height-base:          1.2 !default;
+
+$h1-font-size:              $font-size-base * 1.75 !default;
+$h2-font-size:              $font-size-base * 1.5 !default;
+$h3-font-size:              $font-size-base * 1.25 !default;
+$h4-font-size:              $font-size-base * 1.125 !default;
+$h5-font-size:              $font-size-base !default;
+$h6-font-size:              $font-size-base * .75 !default;
+
+$headings-margin-bottom:    $spacer !default;
+$headings-font-family:      'Calibre', sans-serif !default;
+$headings-font-weight:      $font-weight-normal !default;
+$headings-line-height:      1.2 !default;
+$headings-color:            null !default;
+
+
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:               0 1rem !default;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between:       .5rem !default;
+
+$modal-dialog-margin:               .5rem !default;
+$modal-dialog-margin-y-sm-up:       1.75rem !default;
+
+$modal-title-line-height:           $line-height-base !default;
+
+$modal-content-color:               null !default;
+$modal-content-bg:                  $white !default;
+$modal-content-border-color:        rgba($black, .2) !default;
+$modal-content-border-width:        1px !default;
+$modal-content-border-radius:       .25rem !default;
+$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5) !default;
+
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .5 !default;
+$modal-header-border-color:         $black !default;
+$modal-footer-border-color:         $black !default;
+$modal-header-border-width:         1px !default;
+$modal-footer-border-width:         1px !default;
+$modal-header-padding-y:            1rem !default;
+$modal-header-padding-x:            1rem !default;
+$modal-header-padding:              1rem !default; // Keep this for backwards compatibility
+
+$modal-xl:                          1140px !default;
+$modal-lg:                          800px !default;
+$modal-md:                          500px !default;
+$modal-sm:                          300px !default;
+
+$modal-fade-transform:              translate(0, -50px) !default;
+$modal-show-transform:              none !default;
+$modal-transition:                  transform .3s ease-out !default;
+$modal-scale-transform:             scale(1.02) !default;
+
+

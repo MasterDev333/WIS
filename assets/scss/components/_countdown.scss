@@ -1,0 +1,70 @@
+.section-countdown{
+  width: 270px;
+  margin: 0 auto;
+  .date{
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+  }
+  @include media-breakpoint-up('sm'){
+    width: 200px;
+  }
+  @include media-breakpoint-up('md'){
+    width: 250px;
+  }
+  @include media-breakpoint-up('lg'){
+    width: 370px;
+    .date{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.countdown{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  outline: 2px solid $black;
+  .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 50%;
+    height: 135px;
+    padding-top: .5rem;
+    outline: 1px solid $black;
+    font-size: .75rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    span{
+      display: block;
+      font-size: 4rem;
+      font-style: italic;
+      line-height: .8;
+    }
+  }
+  @include media-breakpoint-up('sm'){
+    width: 200px;
+    .item{
+      height: 100px;
+    }
+  }
+  @include media-breakpoint-up('md'){
+    width: 250px;
+    .item{
+      height: 125px;
+    }
+  }
+  @include media-breakpoint-up('lg'){
+    width: 372px;
+    .item{
+      height: 185px;
+      font-size: 1rem;
+      span{
+        font-size: 5.625rem;
+      }
+    }
+  }
+}

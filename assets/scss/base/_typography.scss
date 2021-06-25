@@ -1,0 +1,68 @@
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $headings-margin-bottom;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+}
+h1 { 
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+}
+h2 { 
+    font-size: $h2-font-size;
+    text-transform: uppercase;
+}
+h3 { 
+    font-size: $h3-font-size;
+    text-transform: uppercase;
+}
+h4 { 
+    font-size: $h4-font-size;
+    text-transform: uppercase;
+}
+h5 { 
+    font-family: $font-family-base;
+    font-size: $h5-font-size;
+    font-weight: $font-weight-bold;
+}
+h6 { 
+    font-family: $font-family-base;
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+}
+.text-center{
+    text-align: center;
+}
+.has-small-size{
+    font-size: .875rem;
+}
+.has-large-size{
+    font-size: 1.75rem;
+}
+a{
+    transition: all .3s ease;
+}
+.divider{
+    margin: 1.75rem 0;
+    text-align: center;
+    span{
+        display: block;
+        margin-top: 1.25rem;
+        font-size: 1.125rem;
+    }
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.icon{
+    width:40px;
+    &.icon-inline{
+        display: inline-block;
+        vertical-align: text-top;
+    }
+    svg{
+        width: 100%;
+        height: auto;
+    }
+}
